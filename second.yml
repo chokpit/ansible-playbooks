@@ -1,0 +1,8 @@
+---
+- hosts: appgroup
+  tasks:
+  - name: install vsftpd
+    yum:
+      name: vsftpd
+      state: installed
+...

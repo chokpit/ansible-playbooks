@@ -2,8 +2,13 @@
 - hosts: appgroup
   remote_user: root
   tasks:
-  - name: ensure apache is at the latest version
+  - name: ensure nginx is at the latest version
     yum:
-      name: httpd
+      name: epel-release
+      state: latest
+  - name: nginx 2/2
+    yum:
+      name: nginx
       state: latest
 ...
+
